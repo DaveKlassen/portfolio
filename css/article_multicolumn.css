@@ -1,0 +1,31 @@
+/*
+	- Student No: A00026160
+	- Name: David Klassen
+	- Work:	Lab 5
+	- Course: COMP 1950
+	- File: article_multicolumn.css
+	-
+*/
+
+
+/* 
+ * For devices > 1140px make a new column 
+ */
+@media only screen and (min-width:1050px) {
+
+	.column_capable  {
+		-webkit-columns: 2 500px;
+		-moz-columns: 2 500px;
+		columns: 2 500px;
+		
+		-webkit-column-rule: 1px solid; /* Chrome, Safari, Opera */
+		-moz-column-rule: 1px solid; /* Firefox */
+		column-rule: 1px solid;				
+	
+		min-height: 100%;
+		/* Without this, floating our articles caused problems with the
+		* sticky footer overlapping real content. 
+		*/
+		overflow: auto;
+	}
+}

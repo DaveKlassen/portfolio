@@ -1,0 +1,516 @@
+/*
+	- Name: David Klassen
+	- Work:	Webpage Styling
+	- File: css/style.css
+	-
+*/
+
+
+/* 
+ * Set the base style shape etc.
+ */
+html, body {
+	width: 100%;
+	height: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	
+	font-family: helvetica, arial, sans-serif;
+	line-height: 120%;
+	color: black;
+}
+
+/* General Style for Links */
+a:link{
+	color: grey;
+	text-decoration: none;	
+	border-bottom: 1px black dashed;
+}
+
+a:visited{
+	color: #B8B8B8;
+}
+
+a:hover{
+	text-decoration: none;
+	border-bottom: 1px black solid;
+}
+
+a:active{
+	color: purple;
+}
+
+/*
+ * Header Style
+ */
+header {
+	top: 0px;
+	height: 43px;
+	width: 100%;
+	padding: 20px 0px 0px 0px;	
+	background: #EFEFEF;
+}
+/* Our site Header Theme/Title */
+header h1 {
+	display: inline;
+	margin-bottom: 0px;
+	padding: 0px 0px 10px 20px;	
+	font-size: 1.5em;
+	font-family: helvetica, arial, sans-serif;
+	font-style: bold;
+	color: black;
+}
+
+header a:link{
+	border: none;
+}
+	
+#li {	
+	display: inline;
+	background: url('../images/result.png');
+	background-position: -0px -82px; 
+	width: 31px; 
+	height: 31px;
+	padding-left: 30px;
+	padding-top: 13px;
+}
+#li:hover {
+	display: inline;
+	background: url('../images/sel_result.png');
+	background-position: -0px -82px; 
+	width: 31px; 
+	height: 31px;
+	padding-left: 30px;
+	padding-top: 13px;
+}
+
+#gh {	
+	display: inline;
+	background: url('../images/result.png');
+	background-position: -0px -41px; 
+	width: 31px; 
+	height: 31px;
+	padding-left: 31px;
+	padding-top: 13px;
+}
+#gh:hover {
+	display: inline;
+	background: url('../images/sel_result.png');
+	background-position: -0px -41px; 
+	width: 31px; 
+	height: 31px;
+	padding-left: 31px;
+	padding-top: 13px;
+}
+
+/*
+ * Style for Navigation
+ */
+nav {
+	top: 63px;
+	width: 100%;
+	height: 25px;
+
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+nav ul {
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: #5C5C5C;
+	color: white;
+	float: left;
+	width: 100%;
+}
+
+nav ul li { display: inline; }
+
+nav ul li a {
+	padding: 0.2em 1em;
+	background-color: #5C5C5C;
+	color: white;
+	text-decoration: none;
+	float: left;	
+}
+
+nav ul li a:link{
+	color: white;
+	border: none;
+	border-right: 1px solid white;	
+}
+
+nav ul li a:visited{
+	color: white;
+	border: none;
+	border-right: 1px solid white;
+}
+
+nav ul li a:hover{
+	background-color: darkgrey;
+	color: white;
+	text-decoration: none;
+	border: none;
+	border-right: 1px solid white;
+}
+
+nav ul li a:active{
+	color: white;
+	border: none;
+	border-right: 1px solid white;
+}
+
+
+/* The currently selected navigation page */
+#current {
+	background-color: #000000;
+}
+
+ 
+/*
+ * The main content section style.
+ */
+section {
+	margin-top: 0px;	
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+
+.start {
+	padding-top: 5px;
+}
+
+
+/*
+ * Featured article styling.
+ */
+article h2 {
+	margin-left: 25px;
+}
+
+article h3 {
+	margin-left: 25px;
+	font-style: italic;
+	color: black;
+}
+
+article p {	
+	margin: 25px;
+}
+
+article ul, article ol {	
+	margin: 25px;
+}
+
+#transition_image{
+	position:relative;
+	float:left;
+	margin: 0px 20px 10px 25px;
+	z-index: 0;
+}
+
+#transition_image_right{
+	position:relative;
+	float: right;
+	margin: 0px 20px 10px 25px;
+	z-index: 0;
+}
+
+/*
+ *  Set the opacity for the default island Location image.
+ */
+#island_image{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	transition:opacity 1s ease;
+}
+/* When hovering over the image provide the island Map image */
+#island_image:hover{
+	opacity:0;
+}
+
+	
+/*
+ * Added to provide for a bottom sticky footer.
+ */
+
+/* This is the segment that sits atop the footer */
+#topper{	
+	margin-left: auto;
+	margin-right: auto;
+	background: white;	
+
+	/* 
+	the bottom margin is the negative value of the footer's height 
+	part of how we ensure footer wont overlap content
+	see the #push for the other part
+	*/
+	 min-height: 100%;
+	 height: auto !important;
+
+	 
+	 /* This must be modified to make content even at the bottom 
+		Else the page will always overflow the default browser/page size */
+	 margin-bottom: -68px;
+ }
+ 
+#push {
+	/* 
+	the push must be the same height as footer 
+	this will keep the footer from 
+	overlapping the content of #topper
+	*/
+	height: 54px;
+}
+
+/* 
+ * Footer styling 
+ */ 
+footer{
+	margin: 0 auto;	
+	height: 54px;
+	position:relative;
+	background: black;
+}
+
+footer p{
+	padding: 15px 4px;
+	margin-left: auto;
+    margin-right: auto;	
+	
+	text-align: center;
+	line-height: normal;
+	font-size: 14px;
+	color: white;
+}
+
+footer p a:link{
+	color: white;
+	border-bottom: 1px white dashed;
+}
+
+footer p a:visited{
+	color: #B8B8B8;
+	border-bottom: 1px #B8B8B8 dashed;
+}
+
+footer p a:hover{
+	color: grey;
+	border-bottom: 1px grey solid;	
+}
+
+footer p a:active{
+	color: yellow;
+	border: none;	
+}
+
+
+/* 
+ * Provide a handheld view for devices less < 480px 
+ */
+@media only screen and (max-width:479px) {
+
+	/*
+	 * If we are on a small mobile device, remove the menu listings	 
+	 * and use a mobile popup menu selector.
+	 */
+	#inactive {
+		display: none;
+		visibility: hidden;
+	}
+
+	/* Make the header font more fluid */
+	header h1 {
+		font-size: 1.25em;
+	}
+	
+	/* 
+	 * Provide for site-map image resizing with view port. 
+	 */
+	img {
+		max-width: 100%;
+	}	
+}
+
+
+/* 
+ * Provide the same style for devices > 480px 
+ */
+@media only screen and (min-width:480px) {
+
+	/*
+	 * These stylings fix the navigation header in place.
+	 */
+	header {
+		position:fixed;
+		
+		/* z-index is required to specify header and nav are on the top layer */
+		z-index: 1;
+	}
+	
+	/* Make the header font more fluid */
+	header h1 {
+		font-size: 1.70em;		
+	}
+	
+	nav {
+		position:fixed;	
+
+		/* z-index is required to specify header and nav are on the top layer */
+		z-index: 1;
+	}
+	
+	#pop {
+		height: 88px;
+		width: 100%;
+	}
+
+	/* 
+	 * Provide for site-map image resizing with view port. 
+	 */
+	img {
+		max-width: 100%;
+	}	
+}
+
+/* 
+ * For devices > 1100px make a new column 
+ */
+@media only screen and (min-width:1100px) {
+
+	/* Make the header font more fluid */
+	header h1 {
+		font-size: 2.0em;
+	}
+	
+	section {
+		min-height: 100%;
+		
+		/* Without this, floating our articles caused problems with the
+		 * sticky footer overlapping real content. 
+		 */
+		overflow: auto;
+	}
+
+	/* 
+	 * Column related changes 
+	 */
+	#left {
+		width: 50%;
+		float: left;
+	}
+
+	#right {
+		width: 50%;
+		float: right;
+	}
+	
+	.start_right {
+		padding-top: 5px;
+	}
+	
+	/* 
+	 * Provide for site-map image resizing with view port. 
+	 */
+	img {
+		max-width: 200%;
+	}		
+}
+
+/* 
+ * For devices > 1100px make a new column 
+ */
+@media only screen and (min-width:1700px) {
+
+	/* 
+	 * Provide for site-map image resizing with view port. 
+	 */
+	img {
+		max-width: none;
+	}		
+}
+
+/* 
+ * The printing output of this page is expected to be much simpler.
+ */
+@media only print {
+
+	/* Choose preferred fonts */
+	body{
+		font-family: helvetica, arial, sans-serif;
+	}
+	
+	h1, h2, h3, h4, h5, h6{
+		font-family: "times new roman", helvetica, arial, sans-serif;
+	}
+
+	/* Remove the borders */
+	#topper, header, footer , figure { 
+		border: none;
+	}
+	
+	/* Our site Header Theme/Title */
+	header h1 {
+		display: inline;
+		margin-bottom: 0px;
+		padding: 0px 200px 15px 20px;	
+		font-size: 35px;
+		font-family: helvetica, arial, sans-serif;
+		page-break-after: avoid !important; 
+	}	
+	
+	/* Images will not be printed. */
+	header a {
+		display:none;
+	}	
+	
+	/* The printer will not navigate */
+	nav {
+		display:none;
+	}
+	
+	section{
+		padding:10px;
+		width: 90%;
+		font-size:.85em;
+	}
+	.start {
+		padding-top: 25px;
+	}
+
+	/* Featured article styling. */
+	article {
+		page-break-inside: avoid;
+	}
+	article h2 {
+		margin-left: 25px;
+	}
+
+	article p {	
+		margin-left: 25px;
+		margin-right: 25px;		
+	}
+	
+	article img {
+		display:none;
+	}
+	
+	/* Print-out the links provided. Refrain from printing internal links */
+	a[href^="https://"]:link:after, 
+	a[href^="https://"]:visited:after,
+	a[href^="http://"]:link:after, 
+	a[href^="http://"]:visited:after{
+	   content: " (URL: " attr(href) ") ";
+	   font-size: 90%;
+	}
+	
+	/* Some simple footer style */
+	footer{
+		text-align:center;		
+		page-break-before: avoid !important; 
+	}
+	footer p {
+		color: black;
+	}
+}

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--- 
+	- Name: David Klassen
+	- Work:	Portfolio Webpage
+	- File: index.html
+	-
+	-->
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>
+			Portfolio - Website - Dave Klassen
+		</title>
+		<meta name="keywords" content="Using CSS3 Responsive Design">
+		<meta name="description" content="Portfolio, Blog, Presentations, Professional Content, and Resume framed in Responsive Design and CSS3 features. Passionate about both software development and security, and although it is a fine line to pair, also attempting to stay on the cutting edge of industry advancements.">
+		
+		<!-- Reduce high resolution display problems. -->
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+		
+		<!-- Use Reset: normalize.css v3.0.2 | MIT License | git.io/normalize -->
+		<link href="css/normalize.css" rel="stylesheet" type="text/css" media="screen">	
+		
+		<!-- The main style for this site -->
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		
+		<!-- A CSS menu for small devices -->
+		<link href="css/menu.css" rel="stylesheet" type="text/css">
+		
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!--script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<script type="text/javascript" src="analytics.js"></script-->		
+	</head>
+
+	<!-- Ensure all content conforms to a basic shape -->
+	<body>
+		<div id="google_translate_element"></div>
+	
+		<!-- Define the shrinkable top section -->
+		<div id="topper">
+		
+			<!-- Have a header block for all posts -->
+			<header>
+				<h1>
+					David Klassen
+				</h1>
+				<a href="https://github.com/DaveKlassen4/"><div id="gh"></div></a>
+				<a href="http://ca.linkedin.com/in/daveklassen"><div id="li"></div></a>
+				<!--
+					<a href="https://www.facebook.com"><div id="fb"></div></a>
+					<a href="https://www.pinterest.com"><div id="pi"></div></a>
+					<a href="https://plus.google.com"><div id="go"></div></a>
+				-->
+			</header>
+		
+			<!-- Use List-based Navigation: http://css.maxdesign.com.au/listamatic/horizontal03.htm -->
+			<nav>		
+				<ul>
+					<li id="nav">
+						<a href="./index.html#nav" title="Show navigation">Show navigation</a>
+						<a href="./index.html#" title="Hide navigation">Hide navigation</a>
+						<ul>
+							<li>
+								<a href="./index.html" id="current">
+									Portfolio
+								</a>
+							</li>	
+							<li>
+								<a href="blogs.html" >
+									Blog
+								</a>
+							</li>
+							<li>
+								<a href="./interests.html">
+									Interests
+								</a>
+							</li>					
+							<li>
+								<a href="./resume.html">
+									Resume
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li id="active">
+						<a href="./index.html" id="current">
+							Portfolio
+						</a>
+					</li>	
+					<li id="inactive">
+						<a href="./blogs.html" >
+							Blog
+						</a>
+					</li>
+					<li id="inactive">
+						<a href="./interests.html">
+							Interests
+						</a>
+					</li>					
+					<li id="inactive">
+						<a href="./resume.html">
+							Resume
+						</a>
+					</li>
+				</ul>
+			</nav>
+			
+			<!-- This tag pushes the section content down from the top -->
+			<div id="pop">
+			</div>
+			
+			<!-- Main content -->
+			<section>
+				
+				<!-- Article Text -->
+				<article id="left">
+					<a href="//www.mocbenefitsplus.ca">
+						<h3 class="start">
+							<a href="http://sample1.kefelan.solutions">
+							Health Insurance - Responsive Form Integration
+							</a>
+						</h3>
+					
+						<div id="transition_image">
+							<img id="island_image" src="images/bwf.png" alt="Responsive From Design" />
+							<img id="map_image" src="images/fs.png" alt="Benefits With Friends" />
+						</div>
+					</a>
+					<p> 
+						This website was created to provide potential clients with a way to get
+						a health insurance plan quote for their family. The task was to make an 
+						appealing form design 
+						that would respond to a numerous number of devices, and provide a simple
+						experience that leads the user through the process of getting a quote or 
+						submitting an application for health insurance. The form design for the 
+						site was required to be highly customizable, and maintain usability during
+						the application process. We chose to use NodeJS and React for this site since
+						both frameworks allow for using the latest developments in Javascript (ES6/ES7).
+					</p>
+				</article>
+				
+				<article id="right">
+					<a href="//www.flexfi.ca">
+						<h3 class="start_right">
+							<a href="//www.flexfi.ca">
+								Micro Loans - Responsive/Mobile Form
+							</a>
+						</h3>
+						<div id="transition_image_right">
+							<img id="island_image" src="images/flexfi.png" alt="Dance is a Poem" />
+							<img id="map_image" src="images/fs.png" alt="Center for Digital Media" />
+						</div>
+					</a>
+					<p>
+						This website was an experiment in using Responsive Web Design to allow
+						for any device to follow through a number of screens to complete the
+						application process for a simple small loan. Depending on the size of the 
+						device screen a different number of fields are presented, so that the user
+						never needs to scroll through a page to see all the fields.
+						Numerous cross/browser/platform issues were addressed,
+						in order to ensure the user could view some help text and also enter data
+						without having to do anything other than tap a field, enter data, and click 
+						a button to proceed to the next screen.
+					</p>						
+				</article>
+			</section>
+			<section>
+				
+				<!-- Article Text -->
+				<article id="left">
+					<a href="//www.multiversial.ca/paradise/">
+						<h3 class="start">
+							<a href="//www.multiversial.ca/paradise/">
+								Paradise Compared - Responsive Design
+							</a>
+						</h3>
+					
+						<div id="transition_image">
+							<img id="island_image" src="images/paradise.png" alt="Responsive Design CSS3" />
+							<img id="map_image" src="images/bcit.png" alt="BCIT" />
+						</div>
+					</a>
+					<p> 
+						This website was created to provide responsive design in a layout using 
+						HTML5 and experimental CSS3 related features. The page content describes 
+						a few vacations I have been able to take over the years (and was the 
+						baseline for this site). The content expands horizonatally as the browser 
+						widens. The menu and navigation stays-on-top if the browser(view port) is 
+						significantly large, otherwise (ie. for mobile devices) it is simply a 
+						part of the page. The bottom footer is sticky and will stick firmly to 
+						the bottom section of the browser as long as the content does not exceed 
+						the browser page height.
+					</p>
+				</article>
+				
+				<article id="right">
+					<a href="//www.multiversial.ca/DanceIsAPoemWeb">
+						<h3 class="start_right">
+							<a href="//www.multiversial.ca/DanceIsAPoemWeb">
+								Dance Is A Poem - Interactive Movie
+							</a>
+						</h3>
+						<div id="transition_image_right">
+							<img id="island_image" src="images/dip.png" alt="Dance is a Poem" />
+							<img id="map_image" src="images/cdm.png" alt="Center for Digital Media" />
+						</div>
+					</a>
+					<p>
+						This Flash Movie was created by a team of five people (Writer, Director, Artist, 
+						and Programmers), as a part of the 
+						<a href="http://thecdm.ca/">Masters of Digital Media</a>(MDM) Program at the 
+						Center for Digital Media. I helped create the Flash interactivity and attempted 
+						to integrate smoothly with the film, without taking away from the flow of action. 
+						It was a group effort so I can really only take credit for reading a book on 
+						Flash, however I hope you'll agree it is an interesting piece which with today's 
+						broadband access allows for significant accessibility, interaction and enjoyment. 
+					</p>						
+				</article>
+			</section>
+			<section>
+				<article id="left">
+					<a href="//www.multiversial.ca/itsyourcity/">
+						<h3>
+							<a href="//www.multiversial.ca/itsyourcity/">
+								Its Your City - Cultural Content
+							</a>
+						</h3>
+						<div id="transition_image">
+							<img id="island_image" src="images/itsyourcity.png" alt="It's Your City!" />
+							<img id="map_image" src="images/cdm.png" alt="Center for Digital Media" />
+						</div>
+					</a>
+					<p>
+						This Drupal website was created by a team of six people (Project Manager, 
+						Writer, Director, Artists, and Programmer), as a part of the 
+						<a href="http://thecdm.ca/">Masters of Digital Media</a>(MDM) Program at 
+						the Center for Digital Media. I helped create this Drupal website in order 
+						to share video information and content focused on informing people about 
+						issues of Locality within different geographic areas. We had a few user 
+						stories we wanted to communicate to viewers. The goal was to allow people 
+						to post YouTube/Vimeo videos on the site using pre-made Drupal modules. 
+						What follows are the videos and information we collected to describe 
+						Vancouver.
+					</p>
+				</article>	
+				<article id="right">
+					<a href="//www.multiversial.ca/uContact/">
+						<h3>
+							<a href="//www.multiversial.ca/uContact/">
+								uContact - Address Book
+							</a>
+						</h3>
+						<div id="transition_image_right">
+							<img id="island_image" src="images/ucontact.png" alt="uContact Address Book App" />
+							<img id="map_image" src="images/bcit.png" alt="BCIT" />
+						</div>
+					</a>
+					<p>
+						This Java web application has been designed to be easy to use and simple 
+						to navigate. A user can Add, Modify, Delete, or Search for contacts 
+						already entered. It requires a user to login with credentials for role 
+						based activities. This three tier web application makes use of an Apache 
+						Webserver, a Tomcat Java Application Server, and a MYSQL database. A 
+						combination of HTML, CSS, JSP, JSTL, EL, i18n, and well placed graphics 
+						provides a visually pleasing interface.					
+					</p>
+				</article>			
+			</section>
+			<section>
+				<article id="left">
+					<a href="http://www.multiversial.ca/JQuery/">
+						<h3>
+							<a href="//www.multiversial.ca/JQuery/">
+								WebUI Features - JQuery
+							</a>
+						</h3>
+						<div id="transition_image">
+							<img id="island_image" src="images/JQuery.png" alt="uContact Address Book App" />
+							<img id="map_image" src="images/bcit.png" alt="BCIT" />
+						</div>
+					</a>
+					<p>
+						This is a set of JQuery/Javascript features I have created to illustrate how JQuery 
+						is mandatory for any Web UI toolkit:
+							click on a small picture to see it displayed in frame, 
+							mouse over links and pop-up window animations appear, 
+							simple to use UI for selected depature and return dates, 
+							give a user instant feed back concerning invalid input, 
+							movable tabs that allow for structured graphical page features, 
+							an example of how to offer multiple styles for viewing an interface, 
+							an AJAX example of how retrieve and process XML, and supply dynamic input hints, 
+							Javascript example describing the dangers behind unvalidated redirects, 
+							a Javascript example showing how using Cookie flags prevents Javascript access
+					</p>
+				</article>	
+				<article id="right">
+					<a href="//www.multiversial.ca/uEmploy-SOAP/">
+						<h3>
+							<a href="//www.multiversial.ca/uEmploy-SOAP/">
+								uEmploy - WebManager 
+							</a>
+ 								-
+							<a href="//www.multiversial.ca/crudServices?wsdl"> 
+								SOAP Service
+							</a>
+							<a href="//www.multiversial.ca/crudServices?xsd=1"> 
+								xsd1
+							</a>
+							<a href="//www.multiversial.ca/crudServices?xsd=2"> 
+								xsd2
+							</a>
+						</h3>
+						<div id="transition_image">
+							<img id="island_image" src="images/soap.png" alt="It's Your City!" />
+							<img id="map_image" src="images/bcit.png" alt="Center for Digital Media" />
+						</div>
+					</a>
+					<p>
+                                                This Java web application uses the the Java
+						<a href="http://www.displaytag.org/1.2/">
+							displaytag
+						</a> 
+						library to easily display SessionBean object Lists in a configurable table.
+                                                A user can Add, Delete, or Search for employees. This web app makes no database 
+                                                calls directly, instead it uses a <b>JAX-WS SOAP</b> service provided by a Java 
+                                                Service Endpoint Interface. This four tier web application makes use of an 
+                                                Apache Webserver, a Tomcat Java Application Server, a Java SEI, and a MYSQL 
+                                                database. A combination of HTML, CSS, JSP, JSTL, EL, displaytag.org, and JAX-WS 
+                                                provide a simple yet powerful interface.
+					</p>
+				</article>
+			</section>
+			<section>
+				<article id="left">
+					<a href="//www.multiversial.ca/uEmploy/">
+						<h3>
+							<a href="//www.multiversial.ca/uEmploy/">
+								uEmploy - WebManager 
+							</a>
+ 								-
+							<a href="//www.multiversial.ca/uEmploy-RESTws/employee/findByID/A00077779"> 
+								REST Service
+							</a>
+							<a href="//www.multiversial.ca/uEmploy-RESTws/employeeCRUD.xsd"> 
+								xsd
+							</a>
+						</h3>
+						<div id="transition_image_right">
+							<img id="island_image" src="images/soap.png" alt="It's Your City!" />
+							<img id="map_image" src="images/bcit.png" alt="BCIT" />
+						</div>
+					</a>
+					<p>
+                                                This Java web application uses the the Java
+						<a href="http://www.displaytag.org/1.2/">
+							displaytag
+						</a> 
+						library to easily display SessionBean object Lists in a configurable table.
+                                                A user can Add, Delete, or Search for employees. This web app makes no database 
+                                                calls directly, instead it uses a <b>JAX-RS REST</b> service provided by a Java 
+                                                Application server. This four tier web application makes use of an Apache
+                                                Webserver, a Tomcat Java Application Server, a JBoss Application server, and a MYSQL 
+                                                database. A combination of HTML, CSS, JSP, JSTL, EL, displaytag.org, and JAX-RS 
+                                                provide a simple yet powerful interface.
+					</p>
+				</article>
+				<article id="right">
+					<a href="http://www.multiversial.ca/ncase/index.html">
+						<h3>
+							<a href="//www.multiversial.ca/ncase/index.html">
+								nCase Firewall - Practicum Project
+							</a>
+						</h3>
+						<div id="transition_image_right">
+							<img id="island_image" src="images/nCase.png" alt="More nCase Info" />
+							<img id="map_image" src="images/bcit.png" alt="BCIT" />
+						</div>
+					</a>
+					<p>
+						This program was the subject of an intense practicum I completed at BCIT, in 
+						order to attempt to provide better security for enterpises engaged in operating 
+						SCADA Systems. It was designed to operate on an Intrinsyc PXA270 embedded Linux 
+						board (ie. a handheld sized board). The configuration provides a firewall that 
+						does not allow any external access. If external access is required a remote client 
+						can request to open a port by using a custom encryption channel. In this way access 
+						through the firewall to the internal network is only available to those that know 
+						the custom encryption/protocol. Access is further monitored by a configuration file 
+						that can be as restrictive as required
+					</p>
+				</article>	
+			</section>
+			<!-- 
+				the #push must be INSIDE #topper
+				and will be styled to be the same height
+				as the footer. this will help keep 
+				content and footer from overlapping
+
+				no content should appear in the #push
+			-->			
+			<div id="push">
+			</div>
+		</div>
+
+		<!-- 
+			our sticky footer!!
+			we want this to always be at the 
+			bottom of the browser page
+		-->
+		<footer>
+			<p>
+				Copyleft (&pound;) 2016 - Design by
+				<a href="http://www.multiversial.ca/portfolio/">
+				dbavedb</a>.
+			</p>
+		</footer>
+	</body>	
+
+</html>
