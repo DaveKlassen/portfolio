@@ -64,7 +64,27 @@ header h1 {
 header a:link{
 	border: none;
 }
-	
+
+#gh {	
+	display: inline;
+	background: url('../images/result.png');
+	background-position: -0px -41px; 
+	width: 31px; 
+	height: 31px;
+	margin-left: 10px;
+	padding-left: 31px;
+	padding-top: 13px;
+}
+#gh:hover {
+	display: inline;
+	background: url('../images/sel_result.png');
+	background-position: -0px -41px; 
+	width: 31px; 
+	height: 31px;
+	margin-left: 10px;
+	padding-left: 31px;
+	padding-top: 13px;
+}	
 #li {	
 	display: inline;
 	background: url('../images/result.png');
@@ -81,25 +101,6 @@ header a:link{
 	width: 31px; 
 	height: 31px;
 	padding-left: 30px;
-	padding-top: 13px;
-}
-
-#gh {	
-	display: inline;
-	background: url('../images/result.png');
-	background-position: -0px -41px; 
-	width: 31px; 
-	height: 31px;
-	padding-left: 31px;
-	padding-top: 13px;
-}
-#gh:hover {
-	display: inline;
-	background: url('../images/sel_result.png');
-	background-position: -0px -41px; 
-	width: 31px; 
-	height: 31px;
-	padding-left: 31px;
 	padding-top: 13px;
 }
 
