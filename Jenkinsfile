@@ -31,6 +31,7 @@ pipeline {
             }
           )
         } catch(err) { // timeout reached or input false
+        echo "User: [${err}]"/*
         def user = err.getCauses()[0].getUser()
         echo "User: [${user}]"
         didTimeout = true
@@ -40,7 +41,7 @@ pipeline {
       } else {
         userInput = false
         echo "Aborted by: [${user}]"
-      }
+      }*/
     }
     echo "userInput [${userInput}]"
     echo "didTimeout [${didTimeout}]"
