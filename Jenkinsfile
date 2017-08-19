@@ -18,7 +18,7 @@ pipeline {
           def userInput = true
           def didTimeout = false
           try {
-            waitUntil(
+            //waitUntil(
               timeout(time: 20, unit: 'SECONDS') { // change to a convenient timeout for you
               userInput = input(
                 id: 'DeployToProd',
@@ -29,57 +29,57 @@ pipeline {
                 ]
               )
             }
-          )
-        } catch(err) { // timeout reached or input false
-        echo "User: [${err}]"/*
-        def user = err.getCauses()[0].getUser()
-        echo "User: [${user}]"
-        didTimeout = true
-        currentBuild.result = 'UNSTABLE'
-        if('SYSTEM' == user.toString()) { // SYSTEM means timeout.
-        didTimeout = true
+            //)
+          } catch(err) { // timeout reached or input false
+          echo "Errors: [${err}]"
+          def user = err.getCauses()[0].getUser()
+          echo "User: [${user}]"
+          didTimeout = true
+          currentBuild.result = 'UNSTABLE'
+          if('SYSTEM' == user.toString()) { // SYSTEM means timeout.
+          didTimeout = true
+        } else {
+          userInput = false
+          echo "Aborted by: [${user}]"
+        }
+      }
+      echo "userInput [${userInput}]"
+      echo "didTimeout [${didTimeout}]"
+      
+      if (userInput == "Deploy") {
+        sh 'echo \'Deploying...\''
+      } else if (userInput == "Abort") {
+        echo "The user decided to abort deployment..."
+        currentBuild.result = 'ABORTED'
+      } else if (userInput == "Undecided") {
+        echo "A user was undecided about a production deployment."
+        currentBuild.result = 'NOT_BUILT'
       } else {
-        userInput = false
-        echo "Aborted by: [${user}]"
-      }*/
-    }
-    echo "userInput [${userInput}]"
-    echo "didTimeout [${didTimeout}]"
-    
-    if (userInput == "Deploy") {
-      sh 'echo \'Deploying...\''
-    } else if (userInput == "Abort") {
-      echo "The user decided to abort deployment..."
-      currentBuild.result = 'ABORTED'
-    } else if (userInput == "Undecided") {
-      echo "A user was undecided about a production deployment."
-      currentBuild.result = 'NOT_BUILT'
-    } else {
-      echo "Timed out at deploy decision."
-      currentBuild.result = 'UNSTABLE'
-    }
-    
-    echo "Build Result : [${currentBuild.result.toString()}]"
-    echo "userInput [${userInput}]"
-    echo "didTimeout [${didTimeout}]"
-    
-    if (userInput == "Deploy") {
-      sh 'echo \'Deploying...\''
-    } else if (userInput == "Abort") {
-      echo "The user decided to abort deployment..."
-      currentBuild.result = 'ABORTED'
-    } else if (userInput == "Undecided") {
-      echo "A user was undecided about a production deployment."
-      currentBuild.result = 'NOT_BUILT'
-    } else {
-      echo "Timed out at deploy decision."
-      currentBuild.result = 'UNSTABLE'
+        echo "Timed out at deploy decision."
+        currentBuild.result = 'UNSTABLE'
+      }
+      
+      echo "Build Result : [${currentBuild.result.toString()}]"
+      echo "userInput [${userInput}]"
+      echo "didTimeout [${didTimeout}]"
+      
+      if (userInput == "Deploy") {
+        sh 'echo \'Deploying...\''
+      } else if (userInput == "Abort") {
+        echo "The user decided to abort deployment..."
+        currentBuild.result = 'ABORTED'
+      } else if (userInput == "Undecided") {
+        echo "A user was undecided about a production deployment."
+        currentBuild.result = 'NOT_BUILT'
+      } else {
+        echo "Timed out at deploy decision."
+        currentBuild.result = 'UNSTABLE'
+      }
+      
+      echo "Build Result : [${currentBuild.result.toString()}]"
     }
     
-    echo "Build Result : [${currentBuild.result.toString()}]"
   }
-  
-}
 }
 }
 }
